@@ -14,8 +14,8 @@ GPIO.setwarnings(False)
 pinTrigger = 17
 pinEcho = 18
 
-# Have an extra variable to provide error checking
-intruderPresent = False;
+# Stops the program from taking pictures unless an object is present for more than one frame
+tripped = False
 
 # This will be the current file number
 fileNumber = 0
@@ -68,22 +68,24 @@ try:
 
         # Set the number below to your desired value, mine was 100cm as that was the distance of the nearest wall
         if Distance < 100:
-            intruderPresent = True
-            if intruderPresent:
+            if tripped:
                 print("Intruder!")
 
                 # Set the filename
-                fileName = "picture" + str(fileNumber) + ".jpg"
+                fileName = "footage/picture" + str(fileNumber) + ".jpg"
                 fileNumber += 1
                 
                 # Take the picture
                 camera.capture(fileName)
                 
                 # Reset the failsafe
-                intruderPresent = False
+                tripped = False
+				
+			# Set the failsafe to active
+			tripped = True
         # Otherwise 
         else:
-            intruderPresent = False
+            tripped = False
             print("Nobody there")
 
         time.sleep(0.5)
