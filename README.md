@@ -56,7 +56,7 @@ python security-camera.py
 
 A folder called "footage" should be created when running the program. This houses all the pictures taken. 
 
-**The program will overrite old pictures every time it is restarted**
+**The program will overwrite old pictures every time it is restarted**
 
 ## License
 
