@@ -30,6 +30,14 @@ How to setup the hardware needed for this project
 
 Given the Raspberry Pi 3b pin layout as shown below:
 
+![Raspberry Pi 3b pin layout](https://github.com/JohnBurke4/Pi-Security-Camera/edit/master/images/image2.png)
+
+Then with the breadboard and the other components you need to wire the following:
+
+![Distance Sensor Setup](https://github.com/JohnBurke4/Pi-Security-Camera/edit/master/images/image1.png)
+
+
+
 
 
 Say what the step will be
